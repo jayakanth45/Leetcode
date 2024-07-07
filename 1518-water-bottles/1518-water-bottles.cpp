@@ -9,7 +9,7 @@ public:
             k=rem;
             rem=(numBottles+rem)%numExchange;
             numBottles=(numBottles+k)/numExchange;
-            cout<<ans<<" "<<rem<<" "<<numBottles<<endl;
+           
         }
         return ans;
         
