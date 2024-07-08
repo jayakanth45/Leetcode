@@ -3,10 +3,11 @@ public:
   vector<int> sumup(int n){
         int res=1;
       vector<int> temp;
-      temp.push_back(1);
+         temp.push_back(1);
         for(int i=1;i<n;i++){
             res=res*(n-i);
-            res/=(i);
+            
+            res/=i;
             temp.push_back(res);
         }
         return temp;
