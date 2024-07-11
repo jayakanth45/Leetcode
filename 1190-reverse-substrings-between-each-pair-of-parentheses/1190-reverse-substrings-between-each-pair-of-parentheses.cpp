@@ -35,7 +35,6 @@ public:
             }
             else if(st.empty()){
                 ans+=s[i];
-                cout<<s[i];
             }
         }
         return ans;
