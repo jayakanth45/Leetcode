@@ -9,6 +9,7 @@ public:
         }
         else if(s[i]==')'){
             int k = st.top();
+            cout<<k;
             st.pop();
             reverse(s.begin()+k+1,s.begin()+i);
         }
