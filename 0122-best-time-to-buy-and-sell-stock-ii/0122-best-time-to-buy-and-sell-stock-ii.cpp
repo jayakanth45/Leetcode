@@ -9,7 +9,7 @@ public:
             if(i==prices.size()-1){
                 ans1+=max(prices[i]-buy,cp);
             }
-            else if(prices[i]<buy || prices[i]<=ele){
+            else if(prices[i]<buy || prices[i]<ele){
                 ans1+=ans;
                 buy=prices[i];
                 cout<<buy<<" ";
