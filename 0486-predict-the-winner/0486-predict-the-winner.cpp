@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool giveans(vector<int> nums,int idx,int idx1,int n,int count,int p,int score1,int score2){
-       if (idx > idx1) {
+       if (count==n) {
         return score1 >= score2;
     }
         
