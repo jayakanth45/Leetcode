@@ -8,8 +8,8 @@ public:
         if(dp[i][j]!=-1)return dp[i][j];
 
         if(word1[i]==word2[j])return dfs(word1,word2,i+1,j+1,dp);
-        int ins= 1+dfs(word1,word2,i,j+1,dp);
-        int del= 1+dfs(word1,word2,i+1,j,dp);
+        int ins= 1+dfs(word1,word2,i+1,j,dp);
+        int del= 1+dfs(word1,word2,i,j+1,dp);
         int rep= 1+dfs(word1,word2,i+1,j+1,dp);
         return dp[i][j]=min({ins,del,rep});
     }
