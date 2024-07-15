@@ -1,33 +1,29 @@
 class Solution {
 public:
-    long long solve(int n, vector<long long> &dp)
-    {
-       
-        if(n ==2)
-        {
-            return 1;
+  
+    int helper(int count,int limit,int n,vector<vector<int>> &dp){
+        if(limit==0){
+            return count==n?1:0;
         }
-        
-
-        if(dp[n]!=-1)
-        {
-            return dp[n];
+        if(count>n){
+            return 0;
         }
-        long long maxi =1;
-        long long p=1;
-        for(int i=1;i<n;i++)
-        {
-                p =i*max(solve(n-i,dp),(long long)n-i);
-                maxi = max(maxi,p);
+        if(dp[count][limit]!=-1){
+            return dp[count][limit];
         }
-        dp[n] =maxi;
-        return dp[n];
+        int pick=1;
+        for(int i=1;i<n;i++){
+            pick=max(pick,i*helper(count+i,limit-1,n,dp));
+        }
+        return dp[count][limit]=pick;
     }
-    long long integerBreak(int n) {
-
-        vector<long long > dp(n+1,-1);
-         long long ans= solve(n,dp);
-         return ans;
+    int integerBreak(int n) {
+        int ans=1;
+        for(int k=2;k<n;k++){
+            vector<vector<int>> dp(n+1,vector<int> (k+1,-1));
+            ans=max(ans,helper(0,k,n,dp));
+        }
+        return ans;
         
     }
 };
