@@ -2,7 +2,7 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) {
         if(nums.size()==1){
-            int flag=1;
+            
         }
             
             else
