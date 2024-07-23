@@ -15,7 +15,7 @@ public:
             for(int i=0;i<x.second.size();i++){
                 temp1.push_back(x.second[i]);
             }
-            sort(temp1.begin(),temp1.end());
+            //sort(temp1.begin(),temp1.end());
             for(int k=temp1.size()-1;k>=0;k--){
                 while(mp[temp1[k]]--){
                     ans.push_back(temp1[k]);
