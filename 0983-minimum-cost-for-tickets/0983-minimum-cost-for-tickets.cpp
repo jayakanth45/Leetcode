@@ -22,7 +22,7 @@ private:
 
     int opt3=cost[2]+solve(n,days,cost,i,dp);
 
-    return dp[index]=min(opt3,min(opt1,opt2));
+    return dp[index]=min(opt2,min(opt1,opt3));
 }
 
 
