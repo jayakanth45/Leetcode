@@ -4,11 +4,12 @@ public:
         int count=0;
         for(int i=0;i<details.size();i++){
             string str=details[i];
-            string s="";
-            s+=str[11];
-            s+=str[12];
-            if(stoi(s)>60){
-                count++;
+           if(int(str[11])-48>6)
+               count++;
+            else if(int(str[11])-48==6){
+                if(str[12]!='0'){
+                    count++;
+                }
             }
         }
         return count;
