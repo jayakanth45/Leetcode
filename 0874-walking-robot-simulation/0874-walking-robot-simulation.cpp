@@ -10,7 +10,7 @@ public:
         bool flag1=0;
         int ans=0;
         string str="north";
-        int flag2=0;
+    
         for(int i=0;i<commands.size();i++){
             
             if(commands[i]!=-1 && commands[i]!=-2){
@@ -106,7 +106,7 @@ public:
                 }
                 ans=max(ans,x*x+y*y);
                 
-                flag2=1;
+       
                 
             }
             if(commands[i]==-1){
