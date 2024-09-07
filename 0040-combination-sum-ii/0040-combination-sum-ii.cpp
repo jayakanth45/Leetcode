@@ -10,8 +10,9 @@ public:
         
         
         for(int i=idx;i<arr.size();i++){
-            if(i!=idx && arr[i]==arr[i-1])
+             if(i!=idx && arr[i]==arr[i-1])
                 continue;
+           
             if(arr[i]>target)
                 break;
             temp.push_back(arr[i]);
