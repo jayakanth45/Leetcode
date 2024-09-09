@@ -18,7 +18,6 @@ public:
         while(head && count<=m*n && i<m && j<n){
             if(i==p && flag4){
                 ans[i][j]=head->val;
-                cout<<ans[i][j];
                 if(j==n-1)
                     i++;
                 else
@@ -50,7 +49,7 @@ public:
             }
            else if(flag1){
                 ans[i][j++]=head->val;
-               cout<<ans[i][j];
+               
             }
             else if(flag2){
                 ans[i++][j]=head->val;
