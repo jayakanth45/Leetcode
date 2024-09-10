@@ -30,7 +30,7 @@ public:
             
             
             
-            head=head->next->next;
+            head=temp;
             
         }
 
