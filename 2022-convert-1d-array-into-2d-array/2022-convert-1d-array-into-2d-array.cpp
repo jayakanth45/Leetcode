@@ -5,8 +5,9 @@ public:
         int k=0;
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                if(k>original.size()-1)
+                if( k>original.size()-1)
                     return {};
+                
                 ans[i][j]=original[k];
                 k++;
             }
