@@ -52,8 +52,7 @@ public:
                     
                 }
             }
-            if(cnt!=0 && cnt%3==0){
-                cout<<"pp";
+            if(cnt%3==0){
                
                 k+=3;
                             
