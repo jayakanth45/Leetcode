@@ -22,7 +22,7 @@ public:
                         um["0"]++;
                     }
                     else{
-                        cout<<temp.substr(k,temp.size())<<" "<<i<<endl;
+                       
                         um[temp.substr(k,temp.size())]++;
                     }
                 }
