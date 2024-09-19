@@ -11,7 +11,7 @@ public:
             return isBadVersion(n)?1:0;
         int ans=0;
         while(l<=h){
-            mid=l+(h-l)/2;
+            mid=h+(l-h)/2;
             if(isBadVersion(mid)){
                 ans=mid;
                 h=mid-1;
