@@ -14,8 +14,6 @@ public:
         if(ones==n || ones==0){
             return 0;
         }
-
-       
         int minSwaps=0;
         int swaps=0;
         for(int i=0;i<ones;i++){
@@ -24,6 +22,10 @@ public:
                 swaps++;
             }
         }
+
+       
+        
+        
 
        
         int i=0,j=ones;
