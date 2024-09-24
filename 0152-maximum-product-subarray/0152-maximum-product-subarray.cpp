@@ -8,8 +8,8 @@ public:
     int num = nums[idx];
 
     // Calculate both pick cases: multiplying current max and min by the current element
-    int pick_max = max({num, num * curr_max, num * curr_min});
-    int pick_min = min({num, num * curr_max, num * curr_min});
+    int pick_max = max({num,num * curr_max, num * curr_min});
+    int pick_min = min({num,num * curr_max, num * curr_min});
 
     // Update the global max product
     global_max = max(global_max, pick_max);
