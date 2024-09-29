@@ -18,7 +18,7 @@ public:
            }
             else cnt1++;
             
-            while(mp1.size()==5 && cnt1>k){
+            while(mp1.size()>=5 && cnt1>k){
                 if(word[i]=='a' || word[i]=='e' || word[i]=='i' || word[i]=='o' || word[i]=='u'){
                     mp1[word[i]]--;
                     if(mp1[word[i]]==0) mp1.erase(word[i]);
@@ -26,8 +26,7 @@ public:
                 else{
                     cnt1--;
                 }
-               // mp[word[i]]--;
-                //if(mp[word[i]]==0) mp.erase(word[i]);
+               
                 i++;
             }
             ans+=(j-i+1);
