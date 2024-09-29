@@ -11,7 +11,7 @@ public:
                 
                 
             }
-            //cout<<temp1<<endl;
+    
             word+=temp1;
             cout<<word<<endl;
         }
