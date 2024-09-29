@@ -11,7 +11,7 @@ public:
         int cnt1=0;
         long long ans=0;
         while(j<n){
-            mp[word[j]]++;
+            
             
            if(word[j]=='a' || word[j]=='e' || word[j]=='i' || word[j]=='o' || word[j]=='u'){
                mp1[word[j]]++;
