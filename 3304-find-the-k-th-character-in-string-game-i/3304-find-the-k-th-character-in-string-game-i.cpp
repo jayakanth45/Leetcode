@@ -13,7 +13,7 @@ public:
             }
     
             word+=temp1;
-            cout<<word<<endl;
+            
         }
        
         return word[k-1];
