@@ -26,8 +26,8 @@ public:
                 else{
                     cnt1--;
                 }
-                mp[word[i]]--;
-                if(mp[word[i]]==0) mp.erase(word[i]);
+               // mp[word[i]]--;
+                //if(mp[word[i]]==0) mp.erase(word[i]);
                 i++;
             }
             ans+=(j-i+1);
