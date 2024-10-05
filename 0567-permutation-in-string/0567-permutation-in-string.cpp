@@ -1,27 +1,38 @@
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
-         map<char,int>m1,m2;
-        for(char c : s1)
-            m1[c]++;
-        int n1 = s1.size() , n2 = s2.size();
-        int i=0,j=0;
-        while(j<n2)
-        {
-                m2[s2[j]]++;
-                 
-                    if(j-i+1 == n1)
-                    {
-                         if(m1==m2)
-                            return true;
-                         m2[s2[i]]--;
-                         if(m2[s2[i]]==0)
-                            m2.erase(s2[i]);
-                        i++; 
-                       
-                    }
-                    j++;
+       if (s1.size() > s2.size()) return false;
+    
+    unordered_map<char, int> um;
+    // Count frequencies of characters in s1
+    for (char c : s1) {
+        um[c]++;
+    }
+    
+    int count = um.size(); // Number of distinct characters in s1
+    int k = s1.size();
+    
+    int j = 0; // Sliding window start
+    
+    // Sliding window over s2
+    for (int i = 0; i < s2.size(); i++) {
+        if (um.find(s2[i]) != um.end()) {
+            um[s2[i]]--;
+            if (um[s2[i]] == 0) count--; // One character fully matched
         }
+        
+        if (i - j + 1 == k) {
+            if (count == 0) return true; // All characters matched
+            
+            // Move left side of the window
+            if (um.find(s2[j]) != um.end()) {
+                if (um[s2[j]] == 0) count++; // Unmatch the character
+                um[s2[j]]++;
+            }
+            j++;
+        }
+    }
+    
     return false;
     }
 };
