@@ -5,9 +5,7 @@ public:
     if(s.size()!=goal.size())
         return false;
         int n=s.size();
-        if(s==goal){
-            return true;
-        }
+       
         while(n--){
              s+=s[0];
              s.erase(s.begin());
