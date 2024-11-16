@@ -12,7 +12,6 @@ public:
             }
             if(i-j+1>=k){
                 int b=(k * (2 * nums[j] + (k - 1))) / 2;
-                cout<<b<<flag<<endl;
                 if(!flag && b==currsum && nums[i]==nums[j]+(k-1)){
                     ans.push_back(nums[i]);
                 }
