@@ -7,7 +7,7 @@ public:
         bool flag=0;
         for(int i=0;i<nums.size();i++){
             currsum+=nums[i];
-            if((i!=n-1 && i-j+1!=k && nums[i]>nums[i+1])|| (i!=n-1 && i-j+1!=k && nums[i+1]-nums[i]!=1)){
+            if((i!=n-1 && i-j+1!=k && nums[i]>nums[i+1])){
                 flag=1;
             }
             if(i-j+1>=k){
