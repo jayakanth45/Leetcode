@@ -9,7 +9,7 @@ public:
             return bed[0]==0?true:false;
         }
         
-        if(bed.size()>1 && bed[0]==0 && bed[1]==0){
+        if(bed[0]==0 && bed[1]==0){
             bed[0]=1;
             count=1;
         }
