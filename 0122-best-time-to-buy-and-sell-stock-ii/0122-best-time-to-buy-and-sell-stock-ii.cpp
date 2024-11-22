@@ -1,30 +1,34 @@
 class Solution {
 public:
+   
     int maxProfit(vector<int>& prices) {
-        int ans=0,ans1=0;
-        int buy=prices[0];
-        int cp=0;
-        int ele=0;
-        for(int i=1;i<prices.size();i++){
-            if(i==prices.size()-1){
-                ans1+=max(prices[i]-buy,cp);
+    int n = prices.size();
+    vector<vector<int>> dp(n+1, vector<int>(2, 0)); // Initialize to 0 for base cases
+
+    // Base cases
+    dp[n][1] = 0; // No profit if no days left to buy
+    dp[n][0] = 0; // No profit if no days left to sell
+
+    // Fill the DP table in reverse
+    for (int idx = n - 1; idx >= 0; idx--) {
+        for (int jdx = 1; jdx >= 0; jdx--) {
+            int profit = 0;
+            if (jdx) {
+                // Buying option
+                int buy = -prices[idx] + dp[idx + 1][0];
+                int skip_buying = dp[idx + 1][1];
+                profit = max(buy, skip_buying);
+            } else {
+                // Selling option
+                int sell = prices[idx] + dp[idx + 1][1];
+                int skip_selling = dp[idx + 1][0];
+                profit = max(sell, skip_selling);
             }
-            else if(prices[i]<buy || prices[i]<=ele){
-                ans1+=ans;
-                buy=prices[i];
-                ans=0;
-                ele=0;
-                cp=0;
-            }
-            else if(prices[i]-buy>cp){
-                ele=prices[i];
-                ans=prices[i]-buy;
-                cp=prices[i]-buy;
-            }
-            
+            dp[idx][jdx] = profit;
         }
-        
-        return ans1;
-        
     }
+
+    return dp[0][1]; // Maximum profit when starting with the option to buy
+}
+
 };
