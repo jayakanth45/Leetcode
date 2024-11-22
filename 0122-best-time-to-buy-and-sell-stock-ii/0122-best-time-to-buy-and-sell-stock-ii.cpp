@@ -12,7 +12,6 @@ public:
             else if(prices[i]<buy || prices[i]<=ele){
                 ans1+=ans;
                 buy=prices[i];
-                cout<<buy<<" ";
                 ans=0;
                 ele=0;
                 cp=0;
