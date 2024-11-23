@@ -27,7 +27,6 @@ public:
                            flag=0;
                            find=1;
                            ans[p][i]='#';
-                          cout<<p<<i;
                        }
                        else{
                            p++;
