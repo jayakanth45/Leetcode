@@ -19,7 +19,7 @@ public:
             }
         }
         string ans="";
-        ans+=to_string(bulls)+"A"+to_string(cows)+"B";
+        ans+=to_string(bulls)+'A'+to_string(cows)+"B";
         return ans;
     }
 };
