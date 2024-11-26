@@ -13,9 +13,6 @@ public:
         }
         for(int i=0;i<guess.size();i++){
             if(um.find(guess[i])!=um.end() && um[guess[i]]>0 && secret[i]!=guess[i]){
-                
-                
-                    cout<<i;
                     cows++;
                     um[guess[i]]--;
                 
