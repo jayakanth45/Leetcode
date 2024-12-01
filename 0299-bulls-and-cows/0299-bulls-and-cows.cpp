@@ -15,7 +15,6 @@ public:
             if(um.find(guess[i])!=um.end() && um[guess[i]]>0 && secret[i]!=guess[i]){
                     cows++;
                     um[guess[i]]--;
-                
             }
         }
         string ans="";
