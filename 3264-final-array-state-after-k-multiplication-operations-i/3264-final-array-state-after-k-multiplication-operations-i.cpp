@@ -5,13 +5,13 @@ public:
        for(int i=0;i<nums.size();i++){
            pq.push({nums[i],i});
        }
+        int p,q;
         while(k--){
-            int p=pq.top().first;
-            int q=pq.top().second;
+            p=pq.top().first;
+            q=pq.top().second;
             pq.pop();
             nums[q]=p*multiplier;
             pq.push({nums[q],q});
-            
         }
         return nums;
     }
